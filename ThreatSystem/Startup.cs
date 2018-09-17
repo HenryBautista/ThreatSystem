@@ -8,6 +8,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using ThreatSystem.Persistence;
+using Microsoft.EntityFrameworkCore;
 
 namespace ThreatSystem
 {
@@ -24,6 +26,8 @@ namespace ThreatSystem
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddEntityFrameworkNpgsql().AddDbContext<ApplicationDbContext>(opt => opt.UseNpgsql(Configuration.GetConnectionString("MyWebApiConnection")));
+    
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
