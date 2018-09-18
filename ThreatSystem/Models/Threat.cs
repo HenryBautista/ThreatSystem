@@ -12,7 +12,7 @@ namespace ThreatSystem.Models
         public int Id { get; set; }
         [MaxLength(50)]
         public string Name { get; set; }
-        [MaxLength(50)]
+        [MaxLength(200)]
         public string Description { get; set; }
         [MaxLength(10)]
         public string initials { get; set; }
