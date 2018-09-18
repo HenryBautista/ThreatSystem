@@ -27,7 +27,15 @@ namespace ThreatSystem
         {
             services.AddMvc();
             services.AddEntityFrameworkNpgsql().AddDbContext<ApplicationDbContext>(opt => opt.UseNpgsql(Configuration.GetConnectionString("MyWebApiConnection")));
-    
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowSpecificOrigin", builder =>
+                builder
+                .AllowAnyHeader()
+                .AllowAnyMethod()
+                .AllowAnyOrigin());
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -37,7 +45,7 @@ namespace ThreatSystem
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            app.UseCors("AllowSpecificOrigin");
             app.UseMvc();
         }
     }

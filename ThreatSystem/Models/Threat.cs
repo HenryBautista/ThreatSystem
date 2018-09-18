@@ -17,7 +17,7 @@ namespace ThreatSystem.Models
         [MaxLength(10)]
         public string initials { get; set; }
 
-        public Measure Measure { get; set; }
-        public int MeasureId { get; set; }
+        public Goods Goods { get; set; }
+        public int GoodsId { get; set; }
     }
 }

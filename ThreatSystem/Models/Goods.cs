@@ -15,7 +15,7 @@ namespace ThreatSystem.Models
         [MaxLength(50)]
         public string Description { get; set; }
 
-        public Threat Threat { get; set; }
-        public int ThreatId { get; set; }
+        public Category Category { get; set; }
+        public int CategoryId { get; set; }
     }
 }

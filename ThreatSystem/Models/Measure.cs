@@ -16,5 +16,7 @@ namespace ThreatSystem.Models
         [MaxLength(10)]
         public string Initials { get; set; }
 
+        public Appreciation Appreciation { get; set; }
+        public int AppreciationId { get; set; }
     }
 }
