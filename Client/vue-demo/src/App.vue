@@ -24,24 +24,26 @@
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
-    <v-toolbar color="indigo" dark fixed app>
+    <v-toolbar color="black" dark fixed app>
       <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
       <v-toolbar-title>Application</v-toolbar-title>
     </v-toolbar>
     <v-content>
-      <v-container fluid fill-height>
+      <!-- <v-container fluid fill-height>
         <v-layout
           justify-center
           align-center
         >
-          <v-flex text-xs-center>
-            <router-view/>
-          </v-flex>
+          <v-flex text-xs-center> -->
+            <v-container fluid fill-heigh>
+                <router-view/>
+            </v-container>
+          <!-- </v-flex>
         </v-layout>
-      </v-container>
+      </v-container> -->
     </v-content>
-    <v-footer color="indigo" app>
-      <span class="white--text">&copy; 2017</span>
+    <v-footer color="black" app>
+      <span class="white--text">CODESS &copy; 2018</span>
     </v-footer>
   </v-app>
 </template>

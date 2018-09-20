@@ -3,7 +3,7 @@ import Router from 'vue-router'
 
 
 import HelloWorld from '@/components/HelloWorld'
-import Threat from '@/threats/Threat'
+import Threat from '@/components/threats/Threat'
 
 Vue.use(Router)
 

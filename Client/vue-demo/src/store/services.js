@@ -1,6 +1,7 @@
 
 import Axios from 'axios'
 import ThreatService from '../services/ThreatService'
+import MeasureService from '../services/MeasureService'
 
 // Axios Configuration
 Axios.defaults.headers.common.Accept = 'application/json'
@@ -8,5 +9,7 @@ Axios.defaults.headers.common.Accept = 'application/json'
  var ApiUrl = "http://localhost:50319/api/";
 
 export default {
-    ThreatService: new ThreatService(Axios, ApiUrl)
+    ThreatService: new ThreatService(Axios, ApiUrl),
+    MeasureService: new MeasureService(Axios, ApiUrl)
+    
 }
