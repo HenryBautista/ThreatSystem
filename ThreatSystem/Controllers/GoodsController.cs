@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ThreatSystem.Models;
+using ThreatSystem.Models.Transform;
 using ThreatSystem.Persistence;
 
 namespace ThreatSystem.Controllers
@@ -26,6 +27,15 @@ namespace ThreatSystem.Controllers
         public IEnumerable<Goods> GetGoods()
         {
             return _context.Goods;
+        }
+
+        [HttpGet]
+        [Route("complete")]
+        public IEnumerable<GoodsDto> GetGoodsComplete(){
+            
+            var list = _context.Goods.Select(b => new GoodsDto{ Id = b.Id, Name = b.Name, Description = b.Description, CategoryId = b.CategoryId
+                        , Threats = _context.Threats.Where(t => t.GoodsId == b.Id).ToList()});
+            return list;
         }
 
         // GET: api/Goods/5

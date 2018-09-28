@@ -26,7 +26,7 @@
     </v-navigation-drawer>
     <v-toolbar color="black" dark fixed app>
       <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
-      <v-toolbar-title>Application</v-toolbar-title>
+      <v-toolbar-title>Manejo de riesgos</v-toolbar-title>
     </v-toolbar>
     <v-content>
       <!-- <v-container fluid fill-height>
@@ -56,7 +56,7 @@ export default {
 
 data: () => ({
 
-      drawer: true
+      drawer: false
 
     }),
 
