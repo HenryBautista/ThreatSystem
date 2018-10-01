@@ -3,6 +3,8 @@ import Axios from 'axios'
 import ThreatService from '../services/ThreatService'
 import MeasureService from '../services/MeasureService'
 import GoodService from '../services/GoodService'
+import AppreciationService from '../services/AppreciationService'
+import FormDataService from '../services/FormDataService'
 
 
 // Axios Configuration
@@ -14,4 +16,7 @@ export default {
     ThreatService: new ThreatService(Axios, ApiUrl),
     MeasureService: new MeasureService(Axios, ApiUrl),
     GoodService: new GoodService(Axios, ApiUrl),
+    AppreciationService: new AppreciationService(Axios, ApiUrl),
+    FormDataService: new FormDataService(Axios, ApiUrl),
+    
 }

@@ -93,8 +93,6 @@
                                 </v-chip>
                               </template>
                             </v-combobox>
-
-                            
                             </div>
                            
                           </v-flex>

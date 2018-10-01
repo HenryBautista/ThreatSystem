@@ -28,6 +28,14 @@ namespace ThreatSystem.Controllers
             return _context.Appreciation;
         }
 
+        [HttpGet]
+        [Route("complete")]
+        public IEnumerable<AppreciationDto> GetComplete(){
+
+            var list = _context.Appreciation.Select(b => new AppreciationDto{ Id = b.Id, Name = b.Name, Description = b.Description, Initials = b.Initials
+                        , Measures = _context.Measures.Where(m => m.AppreciationId == b.Id).ToList()});
+            return list;
+        }
         // GET: api/Appreciations/5
         [HttpGet("{id}")]
         public async Task<IActionResult> GetAppreciation([FromRoute] int id)
