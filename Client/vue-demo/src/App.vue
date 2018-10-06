@@ -35,9 +35,9 @@
           align-center
         >
           <v-flex text-xs-center> -->
-            <v-container fluid fill-heigh>
+            <!-- <v-container fluid fill-heigh> -->
                 <router-view/>
-            </v-container>
+            <!-- </v-container> -->
           <!-- </v-flex>
         </v-layout>
       </v-container> -->

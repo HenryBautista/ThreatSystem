@@ -162,6 +162,8 @@ export default {
         let self  = this
         self.get_threats();
         self.get_measures();
+        console.log("DATA RESPONDE")
+        console.log(self.$route.params);
     },
     data:() =>({
         headers: [

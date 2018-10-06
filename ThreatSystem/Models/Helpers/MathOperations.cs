@@ -35,4 +35,41 @@ namespace ThreatSystem.Models.Helpers
         public double avg_traz { get; set; }
     }
 
+    public class AveragePerType {
+
+        public int id { get; set; }
+        public string name { get; set; }
+
+        public int count_prob { get; set; }
+        public int count_deg { get; set; }
+        public int count_int { get; set; }
+
+
+        public int sum_prob { get; set; }
+        public int sum_deg { get; set; }
+        public int sum_int { get; set; }
+
+        public double avg_prob { get; set; }
+        public double avg_deg { get; set; }
+        public double avg_int { get; set; }
+
+        public AveragePerType()
+        {
+            count_prob = 0;
+            count_deg = 0;
+            count_int = 0;
+
+            sum_prob = 0;
+            sum_deg = 0;
+            sum_int = 0;
+
+            avg_prob = 0;
+            avg_deg = 0;
+            avg_int = 0;
+        }
+
+
+
+    }
+
 }

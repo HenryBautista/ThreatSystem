@@ -18,6 +18,11 @@ class GoodService {
 
     }
 
+    getCompleteByIncidence(id){
+        let self  = this;
+        return self.axios.get(`${self.baseUrl}goods/getbyincidence` ,{ params:{ incidence_id:id}})
+
+    }
     // partial(id, params) {
     //     let self = this;
     //     return self.axios.patch(`${self.baseUrl}users/${id}`, params);

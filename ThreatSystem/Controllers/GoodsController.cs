@@ -38,6 +38,15 @@ namespace ThreatSystem.Controllers
             return list;
         }
 
+        [HttpGet("{incidence_id}")]
+        [Route("getbyincidence")]
+        public IEnumerable<GoodsDto> GetGoodsByIncidence(int incidence_id){
+
+            var list = _context.Goods.Select(b => new GoodsDto{ Id = b.Id, Name = b.Name, Description = b.Description, CategoryId = b.CategoryId
+                        , Threats = _context.Threats.Where(t => t.GoodsId == b.Id).ToList()})
+                        .Where( b => _context.CategoriesIncidents.Any( ci => b.CategoryId == ci.CategoryId && ci.IncidenceId == incidence_id ));
+            return list;
+        }
         // GET: api/Goods/5
         [HttpGet("{id}")]
         public async Task<IActionResult> GetGoods([FromRoute] int id)

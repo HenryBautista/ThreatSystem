@@ -19,6 +19,9 @@ namespace ThreatSystem.Persistence
         public DbSet<Goods> Goods { get; set; }
         public DbSet<Measure> Measures { get; set; }
         public DbSet<Threat> Threats { get; set; }
+        public DbSet<Incidence> Incidents { get; set; }
+        public DbSet<IncidenceType> IncidentsTypes { get; set; }
+        public DbSet<CategoryIncidence> CategoriesIncidents { get; set; }
     }
 
     //public class ApplicationContextDbFactory : IDesignTimeDbContextFactory<ApplicationDbContext>

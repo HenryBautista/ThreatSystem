@@ -11,9 +11,10 @@ using ThreatSystem.Persistence;
 namespace ThreatSystem.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20181003152234_addingtables2")]
+    partial class addingtables2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -47,30 +48,16 @@ namespace ThreatSystem.Migrations
                     b.Property<string>("Description")
                         .HasMaxLength(200);
 
+                    b.Property<int>("IncidenceId");
+
                     b.Property<string>("Name")
                         .HasMaxLength(50);
 
                     b.HasKey("Id");
 
-                    b.ToTable("Categories");
-                });
-
-            modelBuilder.Entity("ThreatSystem.Models.CategoryIncidence", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<int>("CategoryId");
-
-                    b.Property<int>("IncidenceId");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("CategoryId");
-
                     b.HasIndex("IncidenceId");
 
-                    b.ToTable("CategoriesIncidents");
+                    b.ToTable("Categories");
                 });
 
             modelBuilder.Entity("ThreatSystem.Models.Goods", b =>
@@ -101,7 +88,7 @@ namespace ThreatSystem.Migrations
                     b.Property<int>("IncidenceTypeId");
 
                     b.Property<string>("Name")
-                        .HasMaxLength(150);
+                        .HasMaxLength(100);
 
                     b.HasKey("Id");
 
@@ -116,7 +103,7 @@ namespace ThreatSystem.Migrations
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Name")
-                        .HasMaxLength(150);
+                        .HasMaxLength(100);
 
                     b.HasKey("Id");
 
@@ -168,13 +155,8 @@ namespace ThreatSystem.Migrations
                     b.ToTable("Threats");
                 });
 
-            modelBuilder.Entity("ThreatSystem.Models.CategoryIncidence", b =>
+            modelBuilder.Entity("ThreatSystem.Models.Category", b =>
                 {
-                    b.HasOne("ThreatSystem.Models.Category", "Category")
-                        .WithMany()
-                        .HasForeignKey("CategoryId")
-                        .OnDelete(DeleteBehavior.Cascade);
-
                     b.HasOne("ThreatSystem.Models.Incidence", "Incidence")
                         .WithMany()
                         .HasForeignKey("IncidenceId")

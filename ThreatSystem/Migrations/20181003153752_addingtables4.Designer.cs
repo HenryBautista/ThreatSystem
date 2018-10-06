@@ -11,9 +11,10 @@ using ThreatSystem.Persistence;
 namespace ThreatSystem.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20181003153752_addingtables4")]
+    partial class addingtables4
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -101,7 +102,7 @@ namespace ThreatSystem.Migrations
                     b.Property<int>("IncidenceTypeId");
 
                     b.Property<string>("Name")
-                        .HasMaxLength(150);
+                        .HasMaxLength(100);
 
                     b.HasKey("Id");
 
@@ -116,7 +117,7 @@ namespace ThreatSystem.Migrations
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Name")
-                        .HasMaxLength(150);
+                        .HasMaxLength(100);
 
                     b.HasKey("Id");
 

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ThreatSystem.Models;
 using ThreatSystem.Models.Helpers;
 
 namespace ThreatSystem.Services
@@ -31,6 +32,14 @@ namespace ThreatSystem.Services
                 return 0;
 
             return total/count;
+        }
+
+        internal static void GetAverage(AveragePerType sum)
+        {
+            sum.avg_prob = computeAverage(sum.sum_prob, sum.count_prob);
+            sum.avg_deg  = computeAverage(sum.sum_deg, sum.count_deg);
+            sum.avg_int = computeAverage(sum.sum_int, sum.count_int);
+
         }
     }
 

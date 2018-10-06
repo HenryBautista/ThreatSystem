@@ -544,23 +544,23 @@ INSERT INTO public."Goods" ("Id", "CategoryId", "Description", "Name") VALUES (3
 INSERT INTO public."Goods" ("Id", "CategoryId", "Description", "Name") VALUES (4, 1, 'Antivirus', 'ANTIVIRUS');
 INSERT INTO public."Goods" ("Id", "CategoryId", "Description", "Name") VALUES (5, 1, 'Operativo', 'OPERATIVO');
 INSERT INTO public."Goods" ("Id", "CategoryId", "Description", "Name") VALUES (6, 1, 'Otros software', 'OTROS SOFTWARE');
-INSERT INTO public."Goods" ("Id", "CategoryId", "Description", "Name") VALUES (7, 1, 'Servidor de dabes de datos', 'SERVIDOR DE BASES DE DATOS');
-INSERT INTO public."Goods" ("Id", "CategoryId", "Description", "Name") VALUES (8, 1, 'Medios de impresion', 'MEDIOS DE IMPRESIÓN');
-INSERT INTO public."Goods" ("Id", "CategoryId", "Description", "Name") VALUES (8, 1, 'Computadoras de escritorio', 'COMPUTADORAS DE ESCRITORIO');
-INSERT INTO public."Goods" ("Id", "CategoryId", "Description", "Name") VALUES (10, 1, 'Router', 'ROUTER');
-INSERT INTO public."Goods" ("Id", "CategoryId", "Description", "Name") VALUES (11, 1, 'Telefonia ip', 'TELEFONÍA IP');
-INSERT INTO public."Goods" ("Id", "CategoryId", "Description", "Name") VALUES (12, 1, 'Red wifi', 'RED WIFI');
-INSERT INTO public."Goods" ("Id", "CategoryId", "Description", "Name") VALUES (13, 1, 'Red lan', 'RED LAN');
-INSERT INTO public."Goods" ("Id", "CategoryId", "Description", "Name") VALUES (14, 1, 'Internet', 'INTERNET');
-INSERT INTO public."Goods" ("Id", "CategoryId", "Description", "Name") VALUES (15, 1, 'Cableado', 'CABLEADO');
-INSERT INTO public."Goods" ("Id", "CategoryId", "Description", "Name") VALUES (16, 1, 'Mobiliario', 'MOBILIARIO');
-INSERT INTO public."Goods" ("Id", "CategoryId", "Description", "Name") VALUES (17, 1, 'Sistema de vigilancia', 'SISTEMA DE VIGILANCIA');
-INSERT INTO public."Goods" ("Id", "CategoryId", "Description", "Name") VALUES (18, 1, 'Antenas', 'ANTENAS');
-INSERT INTO public."Goods" ("Id", "CategoryId", "Description", "Name") VALUES (19, 1, 'Radios', 'RADIOS');
-INSERT INTO public."Goods" ("Id", "CategoryId", "Description", "Name") VALUES (20, 1, 'Sistema de alimentacion initerrumpida', 'ALIMENTACIÓN ININTERRUMPIDA');
-INSERT INTO public."Goods" ("Id", "CategoryId", "Description", "Name") VALUES (21, 1, 'Otros equipos auxiliares', 'OTROS EQUIPOS AUXILIARES');
+INSERT INTO public."Goods" ("Id", "CategoryId", "Description", "Name") VALUES (7, 2, 'Servidor de dabes de datos', 'SERVIDOR DE BASES DE DATOS');
+INSERT INTO public."Goods" ("Id", "CategoryId", "Description", "Name") VALUES (8, 2, 'Medios de impresion', 'MEDIOS DE IMPRESIÓN');
+INSERT INTO public."Goods" ("Id", "CategoryId", "Description", "Name") VALUES (9, 2, 'Computadoras de escritorio', 'COMPUTADORAS DE ESCRITORIO');
+INSERT INTO public."Goods" ("Id", "CategoryId", "Description", "Name") VALUES (10, 2, 'Router', 'ROUTER');
+INSERT INTO public."Goods" ("Id", "CategoryId", "Description", "Name") VALUES (11, 3, 'Telefonia ip', 'TELEFONÍA IP');
+INSERT INTO public."Goods" ("Id", "CategoryId", "Description", "Name") VALUES (12, 3, 'Red wifi', 'RED WIFI');
+INSERT INTO public."Goods" ("Id", "CategoryId", "Description", "Name") VALUES (13, 3, 'Red lan', 'RED LAN');
+INSERT INTO public."Goods" ("Id", "CategoryId", "Description", "Name") VALUES (14, 3, 'Internet', 'INTERNET');
+INSERT INTO public."Goods" ("Id", "CategoryId", "Description", "Name") VALUES (15, 4, 'Cableado', 'CABLEADO');
+INSERT INTO public."Goods" ("Id", "CategoryId", "Description", "Name") VALUES (16, 4, 'Mobiliario', 'MOBILIARIO');
+INSERT INTO public."Goods" ("Id", "CategoryId", "Description", "Name") VALUES (17, 4, 'Sistema de vigilancia', 'SISTEMA DE VIGILANCIA');
+INSERT INTO public."Goods" ("Id", "CategoryId", "Description", "Name") VALUES (18, 4, 'Antenas', 'ANTENAS');
+INSERT INTO public."Goods" ("Id", "CategoryId", "Description", "Name") VALUES (19, 4, 'Radios', 'RADIOS');
+INSERT INTO public."Goods" ("Id", "CategoryId", "Description", "Name") VALUES (20, 4, 'Sistema de alimentacion initerrumpida', 'ALIMENTACIÓN ININTERRUMPIDA');
+INSERT INTO public."Goods" ("Id", "CategoryId", "Description", "Name") VALUES (21, 4, 'Otros equipos auxiliares', 'OTROS EQUIPOS AUXILIARES');
 INSERT INTO public."Goods" ("Id", "CategoryId", "Description", "Name") VALUES (22, 1, 'Cd', 'CD');
-INSERT INTO public."Goods" ("Id", "CategoryId", "Description", "Name") VALUES (23, 1, 'EDIFICIO', 'EDIFICIO');
+INSERT INTO public."Goods" ("Id", "CategoryId", "Description", "Name") VALUES (23, 5, 'EDIFICIO', 'EDIFICIO');
 INSERT INTO public."Goods" ("Id", "CategoryId", "Description", "Name") VALUES (24, 1, 'Jefatura de dto financiero', 'JEFA DEL DTO. FINANCIERO');
 INSERT INTO public."Goods" ("Id", "CategoryId", "Description", "Name") VALUES (25, 1, 'Mantenimiento base de datos', 'MANTENIMIENTO DB');
 INSERT INTO public."Goods" ("Id", "CategoryId", "Description", "Name") VALUES (26, 1, 'Mantenimiento de equipos', 'MANTENIMIENTO EQ');
@@ -767,3 +767,124 @@ INSERT INTO public."Measures" ("Id", "AppreciationId", "Initials", "Name") VALUE
 INSERT INTO public."Measures" ("Id", "AppreciationId", "Initials", "Name") VALUES (3, 6, 'M', 'Media');
 INSERT INTO public."Measures" ("Id", "AppreciationId", "Initials", "Name") VALUES (4, 6, 'B', 'Baja');
 INSERT INTO public."Measures" ("Id", "AppreciationId", "Initials", "Name") VALUES (5, 6, 'MB', 'Muy baja');
+
+
+INSERT INTO public."Categories"("Id","Description","Name") VALUES(1,'Descripcion de Software','Software');
+INSERT INTO public."Categories"("Id","Description","Name") VALUES(2,'Descripcion de Hardware','Hardware');
+INSERT INTO public."Categories"("Id","Description","Name") VALUES(3,'Descripcion de Comunicaciones','Comunicaciones');
+INSERT INTO public."Categories"("Id","Description","Name") VALUES(4,'Descripcion de Equipos','Equipos Auxiliares');
+INSERT INTO public."Categories"("Id","Description","Name") VALUES(5,'Descripcion de EDIFICIO','Edificio');
+
+INSERT INTO public."IncidentsTypes"("Id", "Name") VALUES(1,'Fallas de Infraestructura y de Tecnología'); 
+INSERT INTO public."IncidentsTypes"("Id", "Name") VALUES(2,'Incidentes donde se Niega Acceso al Sitio');
+INSERT INTO public."IncidentsTypes"("Id", "Name") VALUES(3,'Dependencias de Proveedores de Servicios Clave o Fallas de Recursos');
+INSERT INTO public."IncidentsTypes"("Id", "Name") VALUES(4,'Fallas de Personal, Administración y Humanas Relacionadas');
+INSERT INTO public."IncidentsTypes"("Id", "Name") VALUES(5,'Falla en el Cumplimiento de Obligaciones Estatutarias, Legales, de Recursos Humanos y Otras obligaciones ');
+INSERT INTO public."IncidentsTypes"("Id", "Name") VALUES(6,'Grandes desastres regionales');
+
+--1
+INSERT INTO public."Incidents"("Id", "Name", "IncidenceTypeId") VALUES(1,'Falta de energía eléctrica ',1);
+INSERT INTO public."Incidents"("Id", "Name", "IncidenceTypeId") VALUES(2,'Datos de corrupción incluyendo virus',1);
+INSERT INTO public."Incidents"("Id", "Name", "IncidenceTypeId") VALUES(3,'Falla de la red (LAN) ',1);
+INSERT INTO public."Incidents"("Id", "Name", "IncidenceTypeId") VALUES(4,'Mal mantenimiento de sistema ',1);
+INSERT INTO public."Incidents"("Id", "Name", "IncidenceTypeId") VALUES(5,'Sabotaje ',1);
+INSERT INTO public."Incidents"("Id", "Name", "IncidenceTypeId") VALUES(6,'Falla del equipo',1);
+INSERT INTO public."Incidents"("Id", "Name", "IncidenceTypeId") VALUES(7,'Fallas de la red Internet',1);
+INSERT INTO public."Incidents"("Id", "Name", "IncidenceTypeId") VALUES(8,'Robo de equipo ',1);
+INSERT INTO public."Incidents"("Id", "Name", "IncidenceTypeId") VALUES(9,'Daño accidental ',1);
+INSERT INTO public."Incidents"("Id", "Name", "IncidenceTypeId") VALUES(10,'Mal mantenimiento de infraestructura ',1);
+INSERT INTO public."Incidents"("Id", "Name", "IncidenceTypeId") VALUES(11,'Falla del software ',1);
+INSERT INTO public."Incidents"("Id", "Name", "IncidenceTypeId") VALUES(12,'Inundación interna (rociadores, ductos) ',1);
+INSERT INTO public."Incidents"("Id", "Name", "IncidenceTypeId") VALUES(13,'Robo de datos / información ',1);
+INSERT INTO public."Incidents"("Id", "Name", "IncidenceTypeId") VALUES(14,'Ataque cibernético ',1);
+--2
+INSERT INTO public."Incidents"("Id", "Name", "IncidenceTypeId") VALUES(15,'Peligro de inundación o incendio ',2);
+INSERT INTO public."Incidents"("Id", "Name", "IncidenceTypeId") VALUES(16,'Fugas de gas o productos químicos',2);
+INSERT INTO public."Incidents"("Id", "Name", "IncidenceTypeId") VALUES(17,'Se ocasiona incendio o explosión ',2);
+INSERT INTO public."Incidents"("Id", "Name", "IncidenceTypeId") VALUES(18,'Disturbios Civiles ',2);
+INSERT INTO public."Incidents"("Id", "Name", "IncidenceTypeId") VALUES(19,'Salud y violación a la seguridad ',2);
+INSERT INTO public."Incidents"("Id", "Name", "IncidenceTypeId") VALUES(20,'Amenaza de bomba o de terroristas ',2);
+--3
+INSERT INTO public."Incidents"("Id", "Name", "IncidenceTypeId") VALUES(21,'Falla de proveedores de servicios clave (teléfono, internet, etc.) ',3);
+--4
+INSERT INTO public."Incidents"("Id", "Name", "IncidenceTypeId") VALUES(22,'Error humano ',4);
+INSERT INTO public."Incidents"("Id", "Name", "IncidenceTypeId") VALUES(23,'Falta de guía de políticas (que puede ocasionar el tomar malas decisiones o a actividades no autorizadas)',4);
+INSERT INTO public."Incidents"("Id", "Name", "IncidenceTypeId") VALUES(24,'Fallas en seguir o adherirse a las prácticas administrativas (que pueden causar errores de procesamiento)',4);
+INSERT INTO public."Incidents"("Id", "Name", "IncidenceTypeId") VALUES(25,'Mala capacitación o supervisión inadecuada (que puede llevar a error o ejecución de Negocios no autorizadas)',4);
+INSERT INTO public."Incidents"("Id", "Name", "IncidenceTypeId") VALUES(26,'Mal entendimiento de la naturaleza de los riesgos (que puede ocasionar riesgos innecesarios o desconocidos)',4);
+INSERT INTO public."Incidents"("Id", "Name", "IncidenceTypeId") VALUES(27,'Riesgo de personas clave (que puede llevar a error humano cuando la persona clave está ausente) ',4);
+INSERT INTO public."Incidents"("Id", "Name", "IncidenceTypeId") VALUES(28,'Prácticas fraudulentas, corruptas o deshonestas (que pueden llevar a pérdidas financieras y situaciones políticas embarazosas)',4);
+--5
+INSERT INTO public."Incidents"("Id", "Name", "IncidenceTypeId") VALUES(29,'Obligaciones legales/estatutarias (Ej. cumplimiento con los contratos de préstamos) ',5);
+INSERT INTO public."Incidents"("Id", "Name", "IncidenceTypeId") VALUES(30,'Obligaciones de presentar reportes (Ej. a autoridades superiores e instituciones internacionales) ',5);
+INSERT INTO public."Incidents"("Id", "Name", "IncidenceTypeId") VALUES(31,'Directrices administrativas (Ej. políticas y procedimientos internos) ',5);
+INSERT INTO public."Incidents"("Id", "Name", "IncidenceTypeId") VALUES(32,'Obligaciones contractuales (Ej. obligaciones del servicio de la deuda) ',5);
+INSERT INTO public."Incidents"("Id", "Name", "IncidenceTypeId") VALUES(33,'Manuales de Procedimientos y facultades delegadas',5);
+INSERT INTO public."Incidents"("Id", "Name", "IncidenceTypeId") VALUES(34,'Regulaciones de Salud y Seguridad (Ej. leyes o regulaciones laborales nacionales)',5);
+--6
+INSERT INTO public."Incidents"("Id", "Name", "IncidenceTypeId") VALUES(35,'Terremotos severos',6);
+INSERT INTO public."Incidents"("Id", "Name", "IncidenceTypeId") VALUES(36,'Erupción volcánica',6);
+INSERT INTO public."Incidents"("Id", "Name", "IncidenceTypeId") VALUES(37,'Desprendimientos',6);
+INSERT INTO public."Incidents"("Id", "Name", "IncidenceTypeId") VALUES(38,'Huracán',6);
+INSERT INTO public."Incidents"("Id", "Name", "IncidenceTypeId") VALUES(39,'Incendios graves',6);
+INSERT INTO public."Incidents"("Id", "Name", "IncidenceTypeId") VALUES(40,'Inundación ',6);
+INSERT INTO public."Incidents"("Id", "Name", "IncidenceTypeId") VALUES(41,'Tsunami',6);
+INSERT INTO public."Incidents"("Id", "Name", "IncidenceTypeId") VALUES(42,'Terrorismo',6);
+
+
+INSERT INTO public."CategoriesIncidents"("Id", "CategoryId", "IncidenceId") VALUES(1,5,1);
+INSERT INTO public."CategoriesIncidents"("Id", "CategoryId", "IncidenceId") VALUES(2,4,1);
+INSERT INTO public."CategoriesIncidents"("Id", "CategoryId", "IncidenceId") VALUES(3,1,2);
+INSERT INTO public."CategoriesIncidents"("Id", "CategoryId", "IncidenceId") VALUES(4,2,3);
+INSERT INTO public."CategoriesIncidents"("Id", "CategoryId", "IncidenceId") VALUES(5,3,3);
+INSERT INTO public."CategoriesIncidents"("Id", "CategoryId", "IncidenceId") VALUES(6,2,4);
+INSERT INTO public."CategoriesIncidents"("Id", "CategoryId", "IncidenceId") VALUES(7,4,4);
+INSERT INTO public."CategoriesIncidents"("Id", "CategoryId", "IncidenceId") VALUES(8,1,5);
+INSERT INTO public."CategoriesIncidents"("Id", "CategoryId", "IncidenceId") VALUES(9,2,5);
+INSERT INTO public."CategoriesIncidents"("Id", "CategoryId", "IncidenceId") VALUES(10,3,5);
+INSERT INTO public."CategoriesIncidents"("Id", "CategoryId", "IncidenceId") VALUES(11,2,6);
+INSERT INTO public."CategoriesIncidents"("Id", "CategoryId", "IncidenceId") VALUES(12,2,7);
+INSERT INTO public."CategoriesIncidents"("Id", "CategoryId", "IncidenceId") VALUES(13,3,7);
+INSERT INTO public."CategoriesIncidents"("Id", "CategoryId", "IncidenceId") VALUES(14,2,8);
+INSERT INTO public."CategoriesIncidents"("Id", "CategoryId", "IncidenceId") VALUES(15,4,8);
+INSERT INTO public."CategoriesIncidents"("Id", "CategoryId", "IncidenceId") VALUES(16,1,9);
+INSERT INTO public."CategoriesIncidents"("Id", "CategoryId", "IncidenceId") VALUES(17,2,9);
+INSERT INTO public."CategoriesIncidents"("Id", "CategoryId", "IncidenceId") VALUES(18,4,9);
+INSERT INTO public."CategoriesIncidents"("Id", "CategoryId", "IncidenceId") VALUES(19,2,10);
+INSERT INTO public."CategoriesIncidents"("Id", "CategoryId", "IncidenceId") VALUES(20,4,10);
+INSERT INTO public."CategoriesIncidents"("Id", "CategoryId", "IncidenceId") VALUES(21,1,11);
+INSERT INTO public."CategoriesIncidents"("Id", "CategoryId", "IncidenceId") VALUES(22,2,12);
+INSERT INTO public."CategoriesIncidents"("Id", "CategoryId", "IncidenceId") VALUES(23,4,12);
+INSERT INTO public."CategoriesIncidents"("Id", "CategoryId", "IncidenceId") VALUES(24,1,13);
+INSERT INTO public."CategoriesIncidents"("Id", "CategoryId", "IncidenceId") VALUES(25,1,14);
+INSERT INTO public."CategoriesIncidents"("Id", "CategoryId", "IncidenceId") VALUES(26,2,15);
+INSERT INTO public."CategoriesIncidents"("Id", "CategoryId", "IncidenceId") VALUES(27,2,16);
+INSERT INTO public."CategoriesIncidents"("Id", "CategoryId", "IncidenceId") VALUES(28,2,17);
+INSERT INTO public."CategoriesIncidents"("Id", "CategoryId", "IncidenceId") VALUES(29,2,18);
+INSERT INTO public."CategoriesIncidents"("Id", "CategoryId", "IncidenceId") VALUES(30,1,19);
+INSERT INTO public."CategoriesIncidents"("Id", "CategoryId", "IncidenceId") VALUES(31,2,20);
+INSERT INTO public."CategoriesIncidents"("Id", "CategoryId", "IncidenceId") VALUES(32,4,20);
+INSERT INTO public."CategoriesIncidents"("Id", "CategoryId", "IncidenceId") VALUES(33,2,21);
+INSERT INTO public."CategoriesIncidents"("Id", "CategoryId", "IncidenceId") VALUES(34,4,21);
+INSERT INTO public."CategoriesIncidents"("Id", "CategoryId", "IncidenceId") VALUES(35,2,22);
+INSERT INTO public."CategoriesIncidents"("Id", "CategoryId", "IncidenceId") VALUES(36,1,23);
+INSERT INTO public."CategoriesIncidents"("Id", "CategoryId", "IncidenceId") VALUES(37,4,23);
+INSERT INTO public."CategoriesIncidents"("Id", "CategoryId", "IncidenceId") VALUES(38,1,24);
+INSERT INTO public."CategoriesIncidents"("Id", "CategoryId", "IncidenceId") VALUES(39,2,24);
+INSERT INTO public."CategoriesIncidents"("Id", "CategoryId", "IncidenceId") VALUES(40,1,25);
+INSERT INTO public."CategoriesIncidents"("Id", "CategoryId", "IncidenceId") VALUES(41,2,25);
+INSERT INTO public."CategoriesIncidents"("Id", "CategoryId", "IncidenceId") VALUES(42,1,26);
+INSERT INTO public."CategoriesIncidents"("Id", "CategoryId", "IncidenceId") VALUES(43,2,26);
+INSERT INTO public."CategoriesIncidents"("Id", "CategoryId", "IncidenceId") VALUES(44,1,27);
+INSERT INTO public."CategoriesIncidents"("Id", "CategoryId", "IncidenceId") VALUES(45,2,27);
+INSERT INTO public."CategoriesIncidents"("Id", "CategoryId", "IncidenceId") VALUES(46,4,27);
+INSERT INTO public."CategoriesIncidents"("Id", "CategoryId", "IncidenceId") VALUES(47,5,35);
+INSERT INTO public."CategoriesIncidents"("Id", "CategoryId", "IncidenceId") VALUES(48,5,36);
+INSERT INTO public."CategoriesIncidents"("Id", "CategoryId", "IncidenceId") VALUES(49,5,37);
+INSERT INTO public."CategoriesIncidents"("Id", "CategoryId", "IncidenceId") VALUES(50,5,38);
+INSERT INTO public."CategoriesIncidents"("Id", "CategoryId", "IncidenceId") VALUES(51,5,39);
+INSERT INTO public."CategoriesIncidents"("Id", "CategoryId", "IncidenceId") VALUES(52,5,40);
+INSERT INTO public."CategoriesIncidents"("Id", "CategoryId", "IncidenceId") VALUES(53,5,41);
+INSERT INTO public."CategoriesIncidents"("Id", "CategoryId", "IncidenceId") VALUES(54,5,42);
+
+
