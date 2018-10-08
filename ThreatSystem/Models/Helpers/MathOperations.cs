@@ -53,6 +53,10 @@ namespace ThreatSystem.Models.Helpers
         public double avg_deg { get; set; }
         public double avg_int { get; set; }
 
+        public Risk risk_prob { get; set; }
+        public Risk risk_deg { get; set; }
+        public Risk risk_int { get; set; }
+
         public AveragePerType()
         {
             count_prob = 0;
@@ -67,8 +71,6 @@ namespace ThreatSystem.Models.Helpers
             avg_deg = 0;
             avg_int = 0;
         }
-
-
 
     }
 

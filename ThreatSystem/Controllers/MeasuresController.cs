@@ -25,7 +25,7 @@ namespace ThreatSystem.Controllers
         [HttpGet]
         public IEnumerable<Measure> GetMeasures()
         {
-            return _context.Measures;
+            return _context.Measures.OrderByDescending(o => o.value);
         }
 
         // GET: api/Measures/5

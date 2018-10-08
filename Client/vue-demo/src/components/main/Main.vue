@@ -52,7 +52,7 @@
                                     </h3>
                                 </div>
                                 <v-list>
-                                    <v-list-tile @click="open_dialog(1, incidence)" v-for="incidence in types[0].incidents" :key="incidence.Id">
+                                    <v-list-tile @click="open_dialog(1, incidence)" v-for="incidence in types[1].incidents" :key="incidence.Id">
                                         <v-list-tile-content>
                                             <v-list-tile-title >{{incidence.name}}</v-list-tile-title>
                                         </v-list-tile-content>
@@ -273,7 +273,8 @@ export default {
         hand_data(data){
             let self = this;
             this.dialog_open = false;
-
+            console.log('Datos recibidos desde el chlid');
+            console.log(data);
             self.asing_position(data);
 
             

@@ -41,6 +41,8 @@ namespace ThreatSystem.Services
             sum.avg_int = computeAverage(sum.sum_int, sum.count_int);
 
         }
+
+
     }
 
 

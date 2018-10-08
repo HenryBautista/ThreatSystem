@@ -887,4 +887,9 @@ INSERT INTO public."CategoriesIncidents"("Id", "CategoryId", "IncidenceId") VALU
 INSERT INTO public."CategoriesIncidents"("Id", "CategoryId", "IncidenceId") VALUES(53,5,41);
 INSERT INTO public."CategoriesIncidents"("Id", "CategoryId", "IncidenceId") VALUES(54,5,42);
 
+INSERT INTO public."Risks"("Id", "MaxValue", "MinValue", "Name", "Color") VALUES (1, 10, 1, 'Bajo', 'green');
+INSERT INTO public."Risks"("Id", "MaxValue", "MinValue", "Name", "Color") VALUES (2, 20, 11, 'Moderado', 'yellow');
+INSERT INTO public."Risks"("Id", "MaxValue", "MinValue", "Name", "Color") VALUES (3, 40, 21, 'Alto', 'orange');
+INSERT INTO public."Risks"("Id", "MaxValue", "MinValue", "Name", "Color") VALUES (4, 1000, 41, 'Extremo', 'red');
+
 

@@ -4,32 +4,45 @@
             <v-flex sm4><h6 class="headline">Reporte</h6></v-flex>
         </v-layout>
         <v-layout row wrap>
-            <v-flex sm6 v-for="(item,index) in format_data" :key="index" >
+            <v-flex xs12 sm6 v-for="(item,index) in format_data" :key="index" >
                 <v-card>
                     <v-card-title style="background-color:#64B5F6" class="subheading" >{{item.name}}</v-card-title>
                     <v-divider light></v-divider>
                     <v-container fluid grid-list>
                         <v-layout row justify-center fill-height>
-                            <v-flex sm4>
+                            <v-flex  sm4>
                                 <h6 class="subheading">{{item.probalidad.name}}</h6>
                                 <br/>
-                                <line-chart :data="item.probalidad.data"></line-chart>
+                                <line-chart :data="item.probalidad.data" ></line-chart>
+                                <br>
+                                <v-card :color="item.risk_probabilidad.color">
+                                    <h6 class="subheading text-md-center" >{{item.risk_probabilidad.name}}</h6>
+                                </v-card>
                             </v-flex>
-                            <v-flex sm4>
+                            <v-flex  sm4>
                                 <h6 class="subheading">{{item.degradacion.name}}</h6>
                                 <br/>
                                 <line-chart :data="item.degradacion.data"></line-chart>
-                            </v-flex>
-                            <v-flex sm4><h6 class="subheading">{{item.integridad.name}}</h6>
                                 <br/>
-                                <pie-chart :donut="true" :data="item.integridad.data"></pie-chart>
+                                <v-card :color="item.risk_degradacion.color">
+                                    <h6 class="subheading text-md-center" >{{item.risk_degradacion.name}}</h6>
+                                </v-card>
+                            </v-flex>
+                            <v-flex sm4>
+                                <h6 class="subheading">{{item.integridad.name}}</h6>
+                                <br/>
+                                <line-chart :donut="true" :data="item.integridad.data"></line-chart>
+                                <br/>
+                                <v-card :color="item.risk_integridad.color">
+                                    <h6 class="subheading text-md-center" >{{item.risk_integridad.name}}</h6>
+                                </v-card>
                             </v-flex>
                             
                         </v-layout>
                         <v-layout justify-center>
-                            <v-flex sm12 style="background-color:red; color: white" class="text-md-center">
+                            <!-- <v-flex sm12 style="background-color:red; color: white" class="text-md-center">
                                 PELIGRO
-                            </v-flex>
+                            </v-flex> -->
                         </v-layout>
                     </v-container>
 
@@ -54,6 +67,7 @@ export default {
     created(){
         let self = this;
         self.response_data = self.$route.params.data;
+        console.log('Informacion')
         console.log(self.$route.params);
         
         
@@ -89,7 +103,12 @@ export default {
             category.probalidad = prob;
             category.degradacion = deg;
             category.integridad = inte;
-                
+            
+            category.risk_probabilidad = element.risk_prob;
+            category.risk_degradacion = element.risk_deg;
+            category.risk_integridad = element.risk_int;
+            
+            
             self.format_data.push(category);
             console.log('data formateada');
             console.log(self.format_data);
@@ -101,7 +120,15 @@ export default {
     data:()=>({
           response_data:{},
           chartData: [["Jan", 4], ["Feb", 2], ["Mar", 10], ["Apr", 5], ["May", 3]],
-          format_data:[]
+          format_data:[],
+          chartOptions : {
+      legend: {
+        display: true
+      },                                                                                             
+      scales: {
+        yAxes: [{id: 'y-axis-1', type: 'linear', position: 'left', ticks: {min: 0, max:500}}]
+      }
+    }
 
     })
 }

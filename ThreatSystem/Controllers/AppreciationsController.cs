@@ -33,7 +33,7 @@ namespace ThreatSystem.Controllers
         public IEnumerable<AppreciationDto> GetComplete(){
 
             var list = _context.Appreciation.Select(b => new AppreciationDto{ Id = b.Id, Name = b.Name, Description = b.Description, Initials = b.Initials
-                        , Measures = _context.Measures.Where(m => m.AppreciationId == b.Id).ToList()});
+                        , Measures = _context.Measures.Where(m => m.AppreciationId == b.Id).OrderByDescending(o => o.value).ToList()});
             return list;
         }
         // GET: api/Appreciations/5
