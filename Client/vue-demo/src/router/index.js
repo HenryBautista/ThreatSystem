@@ -6,12 +6,14 @@ import HelloWorld from '@/components/HelloWorld'
 import Threat from '@/components/threats/Threat'
 import Main from '@/components/main/Main'
 import Report from '@/components/report/Report'
+import Login from '@/components/user/Login'
+
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
-      path: '/',
+      path: '/main',
       name: 'Main',
       component: Main
     },
@@ -29,6 +31,11 @@ export default new Router({
       path:'/report',
       name:'Report',
       component: Report    
+    },
+    {
+      path:'/',
+      name:'Login',
+      component: Login    
     }
   ]
 })

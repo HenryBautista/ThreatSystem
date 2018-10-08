@@ -23,6 +23,7 @@ namespace ThreatSystem.Persistence
         public DbSet<IncidenceType> IncidentsTypes { get; set; }
         public DbSet<CategoryIncidence> CategoriesIncidents { get; set; }
         public DbSet<Risk> Risks { get; set; }
+        public DbSet<User> Users { get; set; }
     }
 
     //public class ApplicationContextDbFactory : IDesignTimeDbContextFactory<ApplicationDbContext>

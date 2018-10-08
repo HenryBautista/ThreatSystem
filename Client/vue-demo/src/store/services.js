@@ -6,7 +6,7 @@ import GoodService from '../services/GoodService'
 import AppreciationService from '../services/AppreciationService'
 import FormDataService from '../services/FormDataService'
 import IncidenceTypeService from '../services/IncidenceTypeService'
-
+import UserService from '../services/UserService'
 
 // Axios Configuration
 Axios.defaults.headers.common.Accept = 'application/json'
@@ -20,4 +20,5 @@ export default {
     AppreciationService: new AppreciationService(Axios, ApiUrl),
     FormDataService: new FormDataService(Axios, ApiUrl),
     IncidenceTypeService: new IncidenceTypeService(Axios, ApiUrl),
+    UserService: new UserService(Axios, ApiUrl)
 }
